@@ -2,15 +2,22 @@
 
 Hưởng ứng ngày Trái Đất Xanh
 
-## Getting Started
+Các bước thực hành:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Bổ xung BulbOff.jpg và BulbOn.jpg vào thư mục images
+2. Thử thay đổi Image(image: AssetImage('images/BulbOn.jpg')) sang Image(image: AssetImage('images/BulbOff.jpg'))
+3. Bổ xung thêm nút FlatButton để bật tắt
+4. Thêm trạng thái isBulbOn
+```dart
+bool isBulbOn = true;
+  void toggleBulb() {
+    setState(() {
+      isBulbOn = !isBulbOn;
+    });
+  }
+```
+5. Gắn hàm  onPressed: toggleBulb
+6. Sử dụng ternary condition
+```dart
+Image(image: AssetImage('images/' + (isBulbOn ? 'BulbOn.jpg': 'BulbOff.jpg'))),
+```

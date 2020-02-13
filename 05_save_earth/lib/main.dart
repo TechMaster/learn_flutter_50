@@ -27,6 +27,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isBulbOn = true;
+  void toggleBulb() {
+    setState(() {
+      isBulbOn = !isBulbOn;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +44,22 @@ class _MyHomePageState extends State<MyHomePage> {
             //decoration: new BoxDecoration(color: Colors.black),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Image(image: AssetImage('images/BulbOn.jpg'))],
+              children: <Widget>[
+                Image(image: AssetImage('images/' + (isBulbOn ? 'BulbOn.jpg': 'BulbOff.jpg'))),
+                FlatButton(
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  disabledColor: Colors.grey,
+                  disabledTextColor: Colors.black,
+                  padding: EdgeInsets.all(8.0),
+                  splashColor: Colors.blueAccent,
+                  onPressed: toggleBulb,
+                  child: Text(
+                    isBulbOn ? 'Turn OFF': 'Turn ON',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                )
+              ],
             ),
           ),
         ));
