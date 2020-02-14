@@ -45,6 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Text("Earth Hour",
+                style: TextStyle(backgroundColor: color.white)),
                 Image(image: AssetImage('images/' + (isBulbOn ? 'BulbOn.jpg': 'BulbOff.jpg'))),
                 FlatButton(
                   color: Colors.blue,
