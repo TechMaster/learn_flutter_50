@@ -1,4 +1,4 @@
-# save_earth
+# Earth Hour app
 
 Hưởng ứng ngày Trái Đất Xanh
 
