@@ -59,7 +59,6 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-Kết quả
 ![](.README_images/column_text_widget.png)
 
 ## 03 Mở Flutter Inspector ra để xem cấu trúc cây Widget
@@ -93,7 +92,6 @@ class MyWidget extends StatelessWidget {
   }
 }
 ```
-Kết quả ra thế này
 ![](.README_images/MyWidget.png)
 
 ## 05 Thêm Container để bao lấy Text cách lề, màu nền
