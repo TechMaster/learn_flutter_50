@@ -197,21 +197,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          backgroundColor: Colors.grey[300],
-            body: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    MyWidget("Hello World", "us"),
-                    MyWidget("こんにちは世界", "jp"),
-                    MyWidget("Chào thế giới", "vn"),
-                    MyWidget("Ciao mondo", "it"),
-                    MyWidget("你好，世界", "cn"),
-                  ],
-                ),
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 10)
-            )
-        ));
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                MyWidget("Hello World", "us"),
+                MyWidget("こんにちは世界", "jp"),
+                MyWidget("Chào thế giới", "vn"),
+                MyWidget("Ciao mondo", "it"),
+                MyWidget("你好，世界", "cn"),
+              ],
+            )));
   }
 }
 
@@ -223,17 +218,21 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
-      Image.asset(
-        "images/" + this.country + ".png",
-        scale: 3,
-      ),
-      Container(
-        child: Text(title, style: TextStyle(fontSize: 30)),
-        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-      ),
-    ]);
+    return Container(
+      child:
+      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+        Image.asset(
+          "images/" + this.country + ".png",
+          scale: 2.5,
+        ),
+        Text(title, style: TextStyle(fontSize: 30))
+      ]),
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.all(8),
+      color: Colors.grey[200],
+      alignment: Alignment.bottomRight,
+    );
   }
 }
 ```
-![](.README_images/padding_container.png)
+![](.README_images/container.png)
