@@ -14,9 +14,11 @@ class MyApp extends StatelessWidget {
                 MyWidget("こんにちは世界", "jp"),
                 MyWidget("Chào thế giới", "vn"),
                 MyWidget("Ciao mondo", "it"),
-                MyWidget("你好，世界", "cn"),
+                MyWidget("你好，世界", "cn")
               ],
-            )));
+            )
+        )
+    );
   }
 }
 
@@ -28,19 +30,17 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child:
-      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
-        Image.asset(
-          "images/" + this.country + ".png",
-          scale: 2.5,
-        ),
-        Text(title, style: TextStyle(fontSize: 30))
-      ]),
-      padding: EdgeInsets.all(10),
-      margin: EdgeInsets.all(8),
-      color: Colors.grey[200],
-      alignment: Alignment.bottomRight,
-    );
+    return
+      Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Image.asset("images/" + this.country + ".png", scale: 2),
+              Text(title, style: TextStyle(fontSize: 30))
+            ],
+          ),
+          padding: EdgeInsets.all(10),
+          color: Colors.grey[200],
+      );
   }
 }
