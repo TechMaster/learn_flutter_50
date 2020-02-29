@@ -41,16 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FlatButton(
               color: Colors.blue,
               textColor: Colors.white,
-              disabledColor: Colors.grey,
-              disabledTextColor: Colors.black,
               padding: EdgeInsets.all(8.0),
-              splashColor: Colors.blueAccent,
               onPressed: _incrementCounter,
               child: Text(
                 "You tapped on me " + '$_counter',
